@@ -1,0 +1,23 @@
+current directory: /Users/ssk/Blog_App/vendor/bundle/ruby/3.0.0/gems/io-console-0.6.0/ext/io/console
+/Users/ssk/.rbenv/versions/3.0.1/bin/ruby extconf.rb
+checking for termios.h... yes
+checking for cfmakeraw() in termios.h... yes
+checking for sys/ioctl.h... yes
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... no
+checking for rb_scheduler_timeout()... no
+creating Makefile
+
+current directory: /Users/ssk/Blog_App/vendor/bundle/ruby/3.0.0/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20230616-28273-d76rlw sitelibdir\=./.gem.20230616-28273-d76rlw clean
+
+current directory: /Users/ssk/Blog_App/vendor/bundle/ruby/3.0.0/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20230616-28273-d76rlw sitelibdir\=./.gem.20230616-28273-d76rlw
+compiling console.c
+linking shared-object io/console.bundle
+
+current directory: /Users/ssk/Blog_App/vendor/bundle/ruby/3.0.0/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20230616-28273-d76rlw sitelibdir\=./.gem.20230616-28273-d76rlw install
+/usr/bin/install -c -m 0755 console.bundle ./.gem.20230616-28273-d76rlw/io
+
+current directory: /Users/ssk/Blog_App/vendor/bundle/ruby/3.0.0/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20230616-28273-d76rlw sitelibdir\=./.gem.20230616-28273-d76rlw clean

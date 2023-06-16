@@ -1,0 +1,18 @@
+current directory: /Users/ssk/Blog_App/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.16.0/ext/bootsnap
+/Users/ssk/.rbenv/versions/3.0.1/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/ssk/Blog_App/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230616-28273-3lplvd sitelibdir\=./.gem.20230616-28273-3lplvd clean
+
+current directory: /Users/ssk/Blog_App/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230616-28273-3lplvd sitelibdir\=./.gem.20230616-28273-3lplvd
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/ssk/Blog_App/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230616-28273-3lplvd sitelibdir\=./.gem.20230616-28273-3lplvd install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20230616-28273-3lplvd/bootsnap
+
+current directory: /Users/ssk/Blog_App/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230616-28273-3lplvd sitelibdir\=./.gem.20230616-28273-3lplvd clean
