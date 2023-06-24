@@ -1,25 +1,30 @@
 <h1>List of all posts</h1>
 
-<div>
-  <%= image_tag(@user.photo, width: 120) %>
-  <h1><%= @user.name %></h1>
-  <p>Number of posts: <%= @user.posts_counter %></p>
+<main>
+<%= image_tag("https://example.com/image.jpg", width: 100) %>
+<h1><%= @user.name %></h1>
+<p >Number of posts: <%= @user.posts_counter%></p>
 </div>
 
 <% @posts.each do |post| %>
+
   <div>
-    <%= link_to user_post_path(@user, post) do %>
-      <h2>Post: <%= post.title %></h2>
-    <% end %>
-    <p><%= post.text %></p>
-    <h2>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counters %></h2>
+  <%= link_to user_post_path(@user.id, post.id) do %> 
+  <h3>Post : <%= post.title %></h3>
+  <% end %>
+  <p><%= post.text %></p>
+  <h3>Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counters %><h3>
   </div>
 
   <div>
-    <% post.recent_comments.each do |comment| %>
-      <h3><%= comment.author.name %>: <%= comment.text %></h3>
+  <% post.recent_comments.each do |comment|%>
+    <h3><%= comment.author.name %><%= comment.text %></h3>
     <% end %>
+    </div>
   </div>
-<% end %>
+  
+  <% end%>
 
-</div>
+  <button><%= link_to 'Add new Post', new_user_post_path(@current_user)%></button>
+
+</main>
