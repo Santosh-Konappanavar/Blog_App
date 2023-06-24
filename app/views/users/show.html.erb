@@ -1,6 +1,6 @@
 <h1>Single user</h1>
 <div>
-<%= image_tag("https://example.com/image.jpg", width: 120) %>
+<%= image_tag(user.photo, width: 120) %>
 <strong> <%= @user.name %> </strong>
 <h2>Number of posts: <%= @user.posts_counter %></h2>
 <p><strong>Bio:</strong> <%= @user.bio %></p>
