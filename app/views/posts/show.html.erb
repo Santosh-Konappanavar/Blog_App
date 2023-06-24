@@ -1,14 +1,24 @@
 <h1>Single post</h1>
 <main>
-<div>
-  <h2>Post: <%= @post.title %></h2>
-  <h3>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counters %></h3>
-  <p><%= @post.text %></p>
-</div>
-
-<div>
-  <% @post.recent_comments.each do |comment| %>
-    <h4><%= comment.author.name %>: <%= comment.text %></h4>
-  <% end %>
-</div>
+  <div> 
+    <h2><%= @post.title %></h2>
+    <h4>Comments: <%= @post.comments_count %>, Likes: <%= @post.likes_count %></h4>
+    <p><%= @post.text %></p>
+    <div>
+      <%= form_with(model: @like, url: user_post_likes_path(user_id: @post.author_id, post_id: @post.id), method: :post, local: true) do |form| %>
+        <%= form.button type: :submit, class: 'like-button' do %>
+          Add Like
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div>
+    <h4>Comments:</h4>
+    <% @post.recent_comments.each do |comment| %>
+      <h3><%= comment.author.name %>: <%= comment.text %></h3>
+    <% end %>
+  </div>
 </main>
+<button>
+<%= link_to 'Add Comment', new_user_post_comment_path(user_id: @post.author_id, post_id: @post.id) %>
+</button>
