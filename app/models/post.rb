@@ -21,7 +21,7 @@ class Post < ApplicationRecord
   def comments_count
     comments.count
   end
-  
+
   private
 
   def update_posts_counter
