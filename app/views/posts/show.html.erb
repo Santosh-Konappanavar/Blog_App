@@ -6,14 +6,15 @@
   <h3>Details</h3>
   <div>
     <h2><%= @post.title %></h2>
-    <h4>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></h4>
+    <h4>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counters %></h4>
     <p><%= @post.text %></p>
     <div>
-      <%= form_with(model: @post, url: like_user_post_path(user_id: @current_user.id, id: @post.id), method: :post, local: true) do |form| %>
-        <%= form.button type: :submit, class: 'like-button' do %>
-          Add Like
-        <% end %>
+    <%= form_with(model: @post, url: user_post_likes_path(user_id: @user.id, post_id: @post.id), method: :post, local: true) do |form| %>
+      <%= form.button type: :submit, class: 'like-button' do %>
+        Add Like
       <% end %>
+    <% end %>
+     
     </div>
   </div>
 
