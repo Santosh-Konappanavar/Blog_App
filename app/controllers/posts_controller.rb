@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
+  layout 'standard'
+
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts
+    @posts = @user.posts.includes(:comments).order(created_at: :desc).limit(5)
     @current_user = current_user
   end
 
@@ -26,8 +28,6 @@ class PostsController < ApplicationController
       render 'new'
     end
   end
-
-  private
 
   def post_params
     params.require(:post).permit(:title, :text)

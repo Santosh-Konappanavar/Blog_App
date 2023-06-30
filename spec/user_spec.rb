@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { User.new(name: 'santosh', photo: 'https://google.com', bio: 'wow', posts_counter: 0) }
+  subject { User.new(name: 'santosh', photo: 'https://example.com/profile.jpg', bio: 'wow', posts_counter: 0) }
 
   before { subject.save }
 
@@ -21,7 +21,7 @@ RSpec.describe User, type: :model do
   end
 
   describe '#recent_posts' do
-    let(:user) { User.create(name: 'Santosh', photo: 'https://google.com', bio: 'wow', posts_counter: 0) }
+    let(:user) { User.create(name: 'Santosh', photo: 'https://example.com/profile.jpg', bio: 'wow', posts_counter: 0) }
     let!(:post1) { user.posts.create(title: 'Post 1', text: 'This is post 1', comments_counter: 0, likes_counters: 0) }
     let!(:post2) { user.posts.create(title: 'Post 1', text: 'This is post 2', comments_counter: 0, likes_counters: 0) }
     let!(:post3) { user.posts.create(title: 'Post 3', text: 'This is post 3', comments_counter: 0, likes_counters: 0) }
