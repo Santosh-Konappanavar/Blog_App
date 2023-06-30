@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
@@ -7,13 +5,15 @@ class Ability
     user ||= User.new # guest user
     can :read, Post, public: true
 
-    return unless user.present? 
+    return unless user.present?
+
     can :read, Post, user_id: user.id
     can :destroy, Post, author_id: user.id
     can :destroy, Comment, author_id: user.id
     can :destroy, Post, id: user.posts.pluck(:id)
 
     return unless user.admin?
+
     can :manage, Post
     can :manage, Comment
   end
