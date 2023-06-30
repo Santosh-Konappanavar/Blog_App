@@ -112,6 +112,11 @@ To test the web app run the following command:
 - GitHub: [@Santosh-Konappanavar](https://github.com/Santosh-Konappanavar)
 - Twitter: [@SantoshKonapp1](https://twitter.com/SantoshKonappa1)
 - LinkedIn: [@Santosh Konappanavar](https://www.linkedin.com/in/santosh-konappanavar/)
+👤 **Olanrewaju Oduola David**
+
+- GitHub: [@David-Lanzz](https://github.com/David-Lanzz)
+- Twitter: [@SantoshKonapp1](https://twitter.com/LanzzDavid)
+- LinkedIn: [@Santosh Konappanavar](https://www.linkedin.com/in/david-lanzz/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
