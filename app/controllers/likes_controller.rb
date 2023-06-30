@@ -7,4 +7,10 @@ class LikesController < ApplicationController
     @like.save
     redirect_to user_post_path(user_id: @user_id, id: params[:id])
   end
+  def destroy
+    @post.likes.destroy_all if @post.likes.exists?
+    @post.destroy
+    redirect_to user_posts_path(user_id: current_user.id)
+  end
+  
 end

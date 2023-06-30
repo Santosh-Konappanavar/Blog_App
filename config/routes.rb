@@ -22,5 +22,7 @@ Rails.application.routes.draw do
       resources :likes, only: [:create, :new]
     end
   end
+  resources :posts
+  resources :comments, only: [:destroy]
   root 'home#index'
 end
