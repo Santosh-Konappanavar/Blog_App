@@ -1,24 +1,38 @@
 <h1>Single post</h1>
 <main>
-  <div> 
+  <button>
+    <%= link_to "See all posts", user_posts_path(@user) %>
+  </button>
+  <h3>Details</h3>
+  <div>
     <h2><%= @post.title %></h2>
-    <h4>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counters %></h4>
+    <h4>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></h4>
     <p><%= @post.text %></p>
     <div>
-      <%= form_with(model: @like, url: user_post_likes_path(user_id: @post.author_id, post_id: @post.id), method: :post, local: true) do |form| %>
+      <%= form_with(model: @post, url: like_user_post_path(user_id: @current_user.id, id: @post.id), method: :post, local: true) do |form| %>
         <%= form.button type: :submit, class: 'like-button' do %>
           Add Like
         <% end %>
       <% end %>
     </div>
   </div>
+
+  <% if current_user.admin? || can?(:destroy, @post) %>
+    <%= button_to 'Delete', post_path(@post), method: :delete %>
+  <% end %>
+
   <div>
-    <h4>Comments:</h4>
+    <p><strong>Comments:</strong></p>
     <% @post.recent_comments.each do |comment| %>
       <h3><%= comment.author.name %>: <%= comment.text %></h3>
+
+      <% if current_user.admin? || can?(:destroy, comment) %>
+        <%= button_to 'Delete', comment_path(comment), method: :delete %>
+      <% end %>
     <% end %>
   </div>
+
+  <button>
+    <%= link_to 'Add Comment', new_user_post_comment_path(user_id: @current_user.id, post_id: @post.id) %>
+  </button>
 </main>
-<button>
-<%= link_to 'Add Comment', new_user_post_comment_path(user_id: @current_user.id, post_id: @post.id) %>
-</button>
