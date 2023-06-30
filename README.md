@@ -114,9 +114,9 @@ To test the web app run the following command:
 - LinkedIn: [@Santosh Konappanavar](https://www.linkedin.com/in/santosh-konappanavar/)
 👤 **Olanrewaju Oduola David**
 
-- GitHub: [@David-Lanzz](https://github.com/David-Lanzz)
-- Twitter: [@SantoshKonapp1](https://twitter.com/LanzzDavid)
-- LinkedIn: [@Santosh Konappanavar](https://www.linkedin.com/in/david-lanzz/)
+- GitHub: [@Olanrewaju Oduola](https://github.com/David-Lanzz)
+- Twitter: [@David-Lanzz](https://twitter.com/LanzzDavid)
+- LinkedIn: [@Olanrewaju Oduola](https://www.linkedin.com/in/david-lanzz/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
