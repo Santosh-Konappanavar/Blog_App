@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   layout 'standard'
   before_action :authenticate_user!
-
+  load_and_authorize_resource
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments).order(created_at: :desc).limit(5)
@@ -28,6 +28,13 @@ class PostsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.comments.destroy_all if @post.comments.exists?
+    @post.destroy
+    redirect_to user_posts_path(user_id: current_user.id)
   end
 
   private
