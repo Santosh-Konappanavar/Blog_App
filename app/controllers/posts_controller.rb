@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   layout 'standard'
   before_action :authenticate_user!
-
+  load_and_authorize_resource
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments).order(created_at: :desc).limit(5)
